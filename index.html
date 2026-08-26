@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latif Gaming</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Tahoma,Arial,sans-serif;
+  background:#0b0d12;
+  color:#fff;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#11141b;
+  border-bottom:1px solid #242936;
+  padding:14px 5%;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.logo{
+  font-size:25px;
+  font-weight:bold;
+  color:#00e5ff;
+  white-space:nowrap;
+}
+
+.search{
+  flex:1;
+  max-width:600px;
+  background:#1a1f29;
+  border:1px solid #303744;
+  color:white;
+  padding:12px 16px;
+  border-radius:10px;
+  outline:none;
+}
+
+nav{
+  display:flex;
+  gap:15px;
+}
+
+nav a{
+  color:#ddd;
+  text-decoration:none;
+}
+
+.hero{
+  min-height:430px;
+  padding:80px 7%;
+  display:flex;
+  align-items:center;
+  background:
+    radial-gradient(circle at 20% 20%,#143b48,transparent 40%),
+    linear-gradient(135deg,#10141c,#090b10);
+}
+
+.hero-content{
+  max-width:700px;
+}
+
+.hero h1{
+  font-size:52px;
+  margin-bottom:15px;
+}
+
+.hero h1 span{
+  color:#00e5ff;
+}
+
+.hero p{
+  color:#aeb5c2;
+  line-height:2;
+  margin-bottom:25px;
+}
+
+.btn{
+  border:0;
+  background:#00bcd4;
+  color:#001015;
+  padding:13px 22px;
+  border-radius:9px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.container{
+  width:88%;
+  max-width:1300px;
+  margin:auto;
+  padding:35px 0;
+}
+
+.profile{
+  background:#151922;
+  border:1px solid #292f3b;
+  border-radius:15px;
+  padding:25px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:35px;
+}
+
+.avatar{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #00e5ff;
+  background:#222;
+}
+
+.profile h2{
+  margin-bottom:8px;
+}
+
+.profile p{
+  color:#9da5b3;
+}
+
+.categories{
+  display:flex;
+  gap:10px;
+  overflow:auto;
+  margin-bottom:25px;
+}
+
+.categories button{
+  white-space:nowrap;
+  background:#171c25;
+  border:1px solid #303744;
+  color:#ddd;
+  padding:10px 17px;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+.categories button:hover{
+  border-color:#00e5ff;
+  color:#00e5ff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#151922;
+  border:1px solid #272d38;
+  border-radius:12px;
+  overflow:hidden;
+  transition:.2s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border-color:#00e5ff;
+}
+
+.thumb{
+  height:145px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#25303b,#11151d);
+  font-size:45px;
+}
+
+.card-body{
+  padding:15px;
+}
+
+.card h3{
+  font-size:16px;
+  margin-bottom:9px;
+}
+
+.meta{
+  color:#818997;
+  font-size:12px;
+}
+
+footer{
+  border-top:1px solid #252b35;
+  margin-top:50px;
+  padding:30px 7%;
+  text-align:center;
+  color:#747c89;
+}
+
+@media(max-width:700px){
+  header{
+    flex-wrap:wrap;
+  }
+
+  .search{
+    order:3;
+    flex-basis:100%;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
+
+  .profile{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">LATIF GAMING</div>
+
+<input
+  class="search"
+  id="search"
+  type="text"
+  placeholder="جست‌وجوی بازی، ویدیو یا کلیپ..."
+>
+
+<nav>
+<a href="#">خانه</a>
+<a href="#videos">ویدیوها</a>
+<a href="#profile">پروفایل</a>
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+به <span>Latif Gaming</span> خوش آمدی 🎮
+</h1>
+
+<p>
+مرکز شخصی گیمینگ لطیف برای نمایش ویدیوها، کلیپ‌ها،
+عکس‌ها و محتوای بازی.
+</p>
+
+<button class="btn"
+onclick="document.getElementById('videos').scrollIntoView()">
+مشاهده ویدیوها
+</button>
+
+</div>
+
+</section>
+
+
+<main class="container">
+
+
+<section class="profile" id="profile">
+
+<img
+  class="avatar"
+  src="profile.jpg"
+  alt="عکس پروفایل لطیف"
+  onerror="this.src='https://via.placeholder.com/150'"
+>
+
+<div>
+
+<h2>لطیف 🎮</h2>
+
+<p>
+گیمر | تولیدکننده محتوای گیمینگ
+</p>
+
+</div>
+
+</section>
+
+
+<div class="categories">
+
+<button onclick="showCategory('همه')">همه</button>
+<button onclick="showCategory('PUBG')">PUBG</button>
+<button onclick="showCategory('FPS')">FPS</button>
+<button onclick="showCategory('Racing')">Racing</button>
+<button onclick="showCategory('Mobile')">Mobile</button>
+
+</div>
+
+
+<section id="videos">
+
+<h2 style="margin-bottom:20px">🔥 ویدیوهای جدید</h2>
+
+<div class="grid" id="videoGrid"></div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+© 2026 Latif Gaming — ساخته شده برای لطیف 🎮
+
+</footer>
+
+
+<script>
+
+const videos = [
+
+{
+title:"گیم‌پلی پابجی موبایل",
+category:"PUBG",
+views:"1.2K بازدید"
+},
+
+{
+title:"بهترین لحظات بازی FPS",
+category:"FPS",
+views:"850 بازدید"
+},
+
+{
+title:"مسابقه ماشین‌سواری",
+category:"Racing",
+views:"720 بازدید"
+},
+
+{
+title:"کلیپ گیمینگ موبایل",
+category:"Mobile",
+views:"1.5K بازدید"
+},
+
+{
+title:"هدشات‌های خفن",
+category:"FPS",
+views:"940 بازدید"
+},
+
+{
+title:"گیم‌پلی جدید",
+category:"PUBG",
+views:"2.1K بازدید"
+}
+
+];
+
+
+const grid=document.getElementById("videoGrid");
+
+
+function render(list){
+
+grid.innerHTML="";
+
+list.forEach(video=>{
+
+const card=document.createElement("div");
+
+card.className="card";
+
+card.innerHTML=`
+
+<div class="thumb">▶️</div>
+
+<div class="card-body">
+
+<h3>${video.title}</h3>
+
+<div class="meta">
+${video.category} · ${video.views}
+</div>
+
+</div>
+
+`;
+
+grid.appendChild(card);
+
+});
+
+}
+
+
+function showCategory(category){
+
+if(category==="همه"){
+
+render(videos);
+
+}else{
+
+render(
+videos.filter(video=>video.category===category)
+);
+
+}
+
+}
+
+
+document
+.getElementById("search")
+.addEventListener("input",function(){
+
+const text=this.value.trim().toLowerCase();
+
+render(
+videos.filter(video=>
+video.title.toLowerCase().includes(text) ||
+video.category.toLowerCase().includes(text)
+)
+);
+
+});
+
+
+render(videos);
+
+</script>
+
+</body>
+</html>
